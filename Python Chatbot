@@ -1,0 +1,28 @@
+import random
+
+# list of possible responses
+responses = ["I'm sorry, I didn't understand that.",
+             "Interesting, tell me more.",
+             "I see.",
+             "Very interesting.",
+             "That's cool.",
+             "I don't have an opinion on that."]
+
+# function to generate a response
+def generate_response(user_input):
+    # use a random response
+    return random.choice(responses)
+
+# main function
+def chatbot():
+    print("Hello, I'm a chatbot!")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == "quit":
+            print("Chatbot: Goodbye!")
+            break
+        else:
+            print("Chatbot: " + generate_response(user_input))
+
+# run the chatbot
+chatbot()
